@@ -1,0 +1,635 @@
+/* ========================================
+   Navigation
+   ======================================== */
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  background-color: var(--color-background);
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-title {
+  font-family: var(--font-heading);
+  color: var(--color-navy);
+  font-size: 2rem;
+  margin: 0 0 4px 0;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.nav-title:hover {
+  color: var(--color-navy-hover);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: var(--font-body);
+  color: var(--color-gold);
+}
+
+.nav-links a:hover {
+  color: var(--color-navy);
+}
+
+.nav-links a.active {
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
+.nav-dot {
+  color: var(--color-gold);
+  font-size: 0.8rem;
+}
+
+/* ========================================
+   Hero Section (Home)
+   ======================================== */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 60px;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  color: var(--color-body);
+}
+
+.names-text {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--color-navy);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.location-text {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  color: var(--color-subtitle);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 50%;
+}
+
+.couple-image {
+  width: 100%;
+  height: auto;
+  max-width: 550px;
+  object-fit: contain;
+}
+
+/* ========================================
+   Decorative Dividers
+   ======================================== */
+.divider-container {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.wavy-divider {
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+
+.dot-divider {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0 30px;
+}
+
+.gold-dot {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+}
+
+/* ========================================
+   Section Title (shared)
+   ======================================== */
+.section-title {
+  font-family: var(--font-body);
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.8rem;
+  color: var(--color-body);
+}
+
+/* ========================================
+   Schedule Page
+   ======================================== */
+.schedule-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.schedule-event-card {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.schedule-event-name {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+}
+
+.schedule-event-datetime {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-subtitle);
+  margin-bottom: 12px;
+}
+
+.schedule-event-venue {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+}
+
+.schedule-event-venue a {
+  color: var(--color-navy);
+  text-decoration: none;
+}
+
+.schedule-event-venue a:hover {
+  text-decoration: underline;
+}
+
+.schedule-event-address {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-subtitle);
+  margin-bottom: 8px;
+}
+
+.schedule-event-attire {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-body);
+  margin-top: 8px;
+}
+
+/* Dot chain divider between schedule events */
+.dot-chain-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  gap: 0;
+}
+
+.chain-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-gold);
+}
+
+.chain-line {
+  width: 2px;
+  height: 40px;
+  background-color: var(--color-gold);
+}
+
+/* ========================================
+   FAQ / Questions Page
+   ======================================== */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.faq-expand-list {
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-question-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.faq-question {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--color-navy);
+  transition: color 0.3s ease;
+}
+
+.chevron-container {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.faq-answer {
+  font-family: var(--font-body);
+  color: var(--color-body);
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 20px;
+  white-space: pre-line;
+}
+
+.faq-answer a {
+  color: var(--color-navy);
+  text-decoration: none;
+}
+
+.faq-answer a:hover {
+  text-decoration: underline;
+}
+
+.faq-answer.open {
+  max-height: 500px;
+  opacity: 1;
+  padding: 10px 20px 20px;
+}
+
+.faq-separator {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+  margin: 10px 0;
+}
+
+/* ========================================
+   Our Faves Page
+   ======================================== */
+.faves-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.faves-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.faves-category-name {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+}
+
+.faves-item {
+  font-family: var(--font-body);
+  color: var(--color-subtitle);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.faves-map {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.faves-map-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ========================================
+   Photos / Timeline Page
+   ======================================== */
+.photos-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.timeline {
+  position: relative;
+  padding: 40px 0;
+}
+
+/* Vertical center line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-gold);
+  transform: translateX(-50%);
+}
+
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 1fr 14px 1fr;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.timeline-entry:last-child {
+  margin-bottom: 0;
+}
+
+/* Dot on the timeline */
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-gold);
+  z-index: 2;
+  justify-self: center;
+}
+
+/* Date label - default (right side): date on left, photo on right */
+.timeline-date {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-navy);
+  text-align: right;
+}
+
+/* Photo container */
+.timeline-photo {
+  text-align: left;
+}
+
+/* Timeline image */
+.timeline-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Left entries: photo on left, date on right */
+.timeline-left .timeline-date {
+  order: 2;
+  text-align: left;
+}
+
+.timeline-left .timeline-photo {
+  order: -1;
+  text-align: right;
+}
+
+.timeline-left .timeline-photo .timeline-image {
+  margin-left: auto;
+}
+
+/* ========================================
+   RSVP Page (Stub)
+   ======================================== */
+.rsvp-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+
+.rsvp-coming-soon {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  color: var(--color-subtitle);
+}
+
+/* ========================================
+   Auth / Login
+   ======================================== */
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  flex-direction: column;
+}
+
+.login-title {
+  font-family: var(--font-body);
+  color: var(--color-navy);
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.login-box {
+  background: transparent;
+  padding: 0;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.login-box input {
+  padding: 10px;
+  border: 1px solid var(--color-navy);
+  border-radius: 0;
+  font-size: 16px;
+  outline: none;
+  width: 200px;
+  text-align: center;
+  font-family: var(--font-body);
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.login-box input:focus {
+  border-color: var(--color-navy);
+}
+
+.login-box input:focus::placeholder {
+  color: transparent;
+}
+
+.login-box button {
+  padding: 10px 40px;
+  background-color: var(--color-navy);
+  color: white;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--font-body);
+  text-transform: capitalize;
+  width: 200px;
+}
+
+.login-box button:hover {
+  background-color: var(--color-navy-hover);
+}
+
+.error {
+  color: var(--color-navy);
+  font-size: 14px;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer-container {
+  text-align: center;
+  padding: 60px 20px 40px;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.footer-text {
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-navy);
+  font-size: 1.1rem;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-text {
+    padding-right: 0;
+  }
+
+  .names-text {
+    align-items: center;
+    font-size: 3rem;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    gap: 6px;
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .nav-title {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  /* Timeline stacks vertically on mobile */
+  .timeline::before {
+    left: 13px;
+  }
+
+  .timeline-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+    position: relative;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: 7px;
+    top: 4px;
+  }
+
+  .timeline-date,
+  .timeline-left .timeline-date {
+    width: 100%;
+    text-align: left;
+    order: 0;
+    margin-bottom: 10px;
+  }
+
+  .timeline-photo,
+  .timeline-left .timeline-photo {
+    width: 100%;
+    order: 1;
+    text-align: left;
+  }
+
+  .timeline-image {
+    max-width: 100%;
+  }
+
+  .timeline-left .timeline-photo .timeline-image {
+    margin-left: 0;
+  }
+}

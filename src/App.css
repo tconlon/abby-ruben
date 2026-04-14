@@ -1,0 +1,42 @@
+/* CSS Variables / Design System */
+:root {
+  --color-navy: #000083;
+  --color-navy-hover: #000066;
+  --color-background: #d4e8f3;
+  --color-gold: #d4952a;
+  --color-body: #2B1105;
+  --color-subtitle: #4a4a4a;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Gowun Batang', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-body);
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-background);
+}
+
+.app {
+  background-color: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-content {
+  padding-top: 120px;
+}
