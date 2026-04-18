@@ -18,8 +18,8 @@ const WavyDivider = () => (
 
 const DotDivider = () => (
   <div className="dot-divider">
-    {[...Array(5)].map((_, i) => (
-      <span key={i} className="gold-dot">•</span>
+    {[...Array(14)].map((_, i) => (
+      <span key={i} className="gold-dot" />
     ))}
   </div>
 );
@@ -27,15 +27,18 @@ const DotDivider = () => (
 const HeroSection = () => (
   <div className="hero-container">
     <div className="hero-text">
-      <div className="names-text">
-        <div>Abigail +</div>
-        <div>Ruben</div>
+      <div className="hero-text-inner">
+        <div className="names-text">
+          <div>Abigail</div>
+          <div>+ Ruben</div>
+        </div>
+        <DotDivider />
+        <p className="location-text">October 23, 2026 | Chicago, IL</p>
       </div>
-      <p className="location-text">October 23, 2026 — Chicago, IL</p>
     </div>
     <div className="hero-image">
       <img
-        src={"/assets/home/abby-ruben-sketch_transparent.png"}
+        src={"/assets/home/abby-ruben-sketch_transparent.webp"}
         alt="Abigail and Ruben"
         className="couple-image"
       />
@@ -54,7 +57,6 @@ export const Home = () => {
       <div className="main-content">
         <HeroSection />
         <WavyDivider />
-        <DotDivider />
         <Footer />
       </div>
     </div>

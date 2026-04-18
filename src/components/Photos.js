@@ -4,15 +4,15 @@ import { Footer } from './Footer';
 import '../styles/Styles.css';
 
 const timelineEntries = [
-  { date: "march 12, 2022", side: "left", photo: "/assets/photos/ar_1.png" },
-  { date: "june 22, 2022", side: "right", photo: "/assets/photos/ar_2.png" },
-  { date: "august 9, 2023", side: "left", photo: "/assets/photos/ar_3.png" },
-  { date: "september 20, 2023", side: "right", photo: "/assets/photos/ar_4.png" },
-  { date: "october 4, 2024", side: "left", photo: "/assets/photos/ar_5.png" },
-  { date: "may 14, 2024", side: "right", photo: "/assets/photos/ar_6.png" },
-  { date: "september 18, 2024", side: "left", photo: "/assets/photos/ar_7.png" },
-  { date: "june 13, 2025", side: "right", photo: "/assets/photos/ar_8.png" },
-  { date: "december 13, 2025", side: "left", photo: "/assets/photos/ar_9.png" },
+  { date: "march 12, 2022", side: "left", photo: "/assets/photos/ar_1.webp" },
+  { date: "june 22, 2022", side: "right", photo: "/assets/photos/ar_2.webp" },
+  { date: "august 9, 2023", side: "left", photo: "/assets/photos/ar_3.webp" },
+  { date: "september 20, 2023", side: "right", photo: "/assets/photos/ar_4.webp" },
+  { date: "october 4, 2024", side: "left", photo: "/assets/photos/ar_5.webp" },
+  { date: "may 14, 2024", side: "right", photo: "/assets/photos/ar_6.webp" },
+  { date: "september 18, 2024", side: "left", photo: "/assets/photos/ar_7.webp" },
+  { date: "june 13, 2025", side: "right", photo: "/assets/photos/ar_8.webp" },
+  { date: "december 13, 2025", side: "left", photo: "/assets/photos/ar_9.webp" },
 ];
 
 export const Photos = () => {
@@ -35,6 +35,7 @@ export const Photos = () => {
                     src={entry.photo}
                     alt={entry.date}
                     className="timeline-image"
+                    loading="lazy"
                   />
                 </div>
               </div>

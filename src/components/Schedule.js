@@ -5,9 +5,9 @@ import '../styles/Styles.css';
 
 const DotChainDivider = () => (
   <div className="dot-chain-divider">
-    <span className="chain-dot"></span>
-    <span className="chain-line"></span>
-    <span className="chain-dot"></span>
+    {[...Array(36)].map((_, i) => (
+      <span key={i} className="chain-dot"></span>
+    ))}
   </div>
 );
 
