@@ -4,12 +4,13 @@ import { Navigation } from './Navigation';
 import { Footer } from './Footer';
 import '../styles/Styles.css';
 
-const SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbxI3KsKaF9sXhVga0ao2xYfVAAPThvYWLqSV4kgEQkI7WXfp9C2_q6fI8hgBQAifP9ktw/exec';
+const SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbzRek-BZlmm0OEcwtZfud8CioeXGnhnO51Ug9c5U77Z10fZfIwt89T1xy2f98Jy5PEgBg/exec';
 
 export const RSVP = () => {
   const [rsvpData, setRsvpData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [householdOptions, setHouseholdOptions] = useState([]);
   const [selectedGuests, setSelectedGuests] = useState([]);
   const [step, setStep] = useState(1);
   const [guestResponses, setGuestResponses] = useState({});
@@ -67,15 +68,16 @@ export const RSVP = () => {
 
     if (!trimmedSearchTerm) {
       setSearchResults([]);
+      setHouseholdOptions([]);
       setSelectedGuests([]);
       setStatus(prev => ({ ...prev, loading: false }));
       return;
     }
 
     const matchingHouseholdIds = new Set();
+    const normalizedSearch = trimmedSearchTerm.toLowerCase();
 
     rsvpData.forEach(guest => {
-      const normalizedSearch = trimmedSearchTerm.toLowerCase();
       const firstName = String(guest.first_name || '').toLowerCase();
       const lastName = String(guest.last_name || '').toLowerCase();
 
@@ -84,15 +86,37 @@ export const RSVP = () => {
       }
     });
 
-    const results = rsvpData.filter(guest => matchingHouseholdIds.has(guest.group));
+    const matchingHouseholds = Array.from(matchingHouseholdIds).map(group => ({
+      group,
+      guests: rsvpData.filter(guest => guest.group === group)
+    }));
+
+    const results = matchingHouseholds.flatMap(household => household.guests);
 
     if (results.length === 0) {
       setStatus(prev => ({ ...prev, noResults: true }));
     }
 
-    setSearchResults(results);
+    if (matchingHouseholds.length === 1) {
+      setSearchResults(matchingHouseholds[0].guests);
+      setHouseholdOptions([]);
+    } else {
+      setSearchResults([]);
+      setHouseholdOptions(matchingHouseholds);
+    }
+
     setSelectedGuests([]);
     setStatus(prev => ({ ...prev, loading: false }));
+  };
+
+  const getGuestName = (guest) => `${guest.first_name} ${guest.last_name}`;
+
+  const getHouseholdLabel = (guests) => guests.map(getGuestName).join(', ');
+
+  const handleHouseholdSelection = (household) => {
+    setSearchResults(household.guests);
+    setHouseholdOptions([]);
+    setSelectedGuests([]);
   };
 
   const handleGuestSelection = (guestId) => {
@@ -153,6 +177,7 @@ export const RSVP = () => {
   const resetAndGoHome = () => {
     setSearchTerm('');
     setSearchResults([]);
+    setHouseholdOptions([]);
     setSelectedGuests([]);
     setGuestResponses({});
     setStep(1);
@@ -245,6 +270,24 @@ export const RSVP = () => {
                 <div className="no-results-message">
                   We can't pull up any invites for that name!
                   Please try again, or try with the first or last name of someone else in your party.
+                </div>
+              )}
+
+              {householdOptions.length > 0 && !status.loading && (
+                <div className="household-results">
+                  <p>We found a few parties for that name. Which one is yours?</p>
+                  <div className="household-list">
+                    {householdOptions.map(household => (
+                      <button
+                        key={String(household.group)}
+                        type="button"
+                        className="household-option"
+                        onClick={() => handleHouseholdSelection(household)}
+                      >
+                        {getHouseholdLabel(household.guests)}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               )}
 

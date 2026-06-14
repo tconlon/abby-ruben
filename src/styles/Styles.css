@@ -597,18 +597,50 @@
   cursor: not-allowed;
 }
 
-.rsvp-results {
+.rsvp-results,
+.household-results {
   margin-top: 28px;
   text-align: center;
 }
 
 .rsvp-results p,
+.household-results p,
 .event-selection p,
 .notes-section p {
   font-family: var(--font-body);
   color: var(--color-body);
   line-height: 1.5;
   margin: 0 0 14px;
+}
+
+.household-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 18px 0 0;
+}
+
+.household-option {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 0, 131, 0.5);
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.16);
+  color: var(--color-body);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.45;
+  text-align: left;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.household-option:hover,
+.household-option:focus {
+  border-color: var(--color-navy);
+  background-color: rgba(255, 255, 255, 0.28);
+  color: var(--color-navy);
+  outline: none;
 }
 
 .guest-list {
