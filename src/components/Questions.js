@@ -11,7 +11,7 @@ const faqItems = [
   },
   {
     question: "Will you have a registry or are you accepting gifts?",
-    answer: "Answer coming soon…"
+    answer: "We are so lucky to be in a position where we don&rsquo;t need anything, and both of us truly feel that having your company at our wedding is more than we can ask for.\n\nThat said, we know that some of you will insist on a gift, so you can find our registries here. We ask that you don&rsquo;t gift us anything, but if you must, we rather have something off the registry, to avoid receiving any duplicate items.\n\n<a href=\"https://soireeseason.com/registry/profile/6a03e251ac3d81829bfc070d\" target=\"_blank\" rel=\"noopener noreferrer\">Soiree Season</a>\n<a href=\"https://www.crateandbarrel.com/gift-registry/Abby-Kendall-and-Ruben-Villarreal/r7564179\" target=\"_blank\" rel=\"noopener noreferrer\">Crate and Barrel</a>"
   },
   {
     question: "Is there a dress code?",
