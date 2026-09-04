@@ -47,7 +47,7 @@ export const Schedule = () => {
             time="5–11:30PM"
             venue="The Joinery"
             address="2533 W Homer St, Chicago IL 60647"
-            mapsUrl="https://maps.app.goo.gl/placeholder"
+            mapsUrl="https://maps.app.goo.gl/J2PxMmGxxyT5LK7g8"
             attire="Cocktail"
           />
 
@@ -57,7 +57,9 @@ export const Schedule = () => {
             title="Late Night"
             date="Fri Oct 23, 2026"
             time="11:30PM–Late"
-            venue="TBD"
+            venue="Green Eye Lounge"
+            address="2403 W Homer St, Chicago IL 60647"
+            mapsUrl="https://maps.app.goo.gl/FJbRUAjeS5qXRoqu9"
           />
 
           <DotChainDivider />
@@ -68,7 +70,7 @@ export const Schedule = () => {
             time="12–2PM"
             venue="Pilot Project"
             address="2140 N Milwaukee Ave, Chicago IL 60647"
-            mapsUrl="https://maps.app.goo.gl/placeholder"
+            mapsUrl="https://maps.app.goo.gl/RanES47e2xJVM12q9"
             attire="Casual"
           />
         </div>
