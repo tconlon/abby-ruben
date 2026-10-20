@@ -31,7 +31,7 @@ const faqItems = [
   },
   {
     question: "Where is the ceremony located? When should I get there?",
-    answer: "Everything for our wedding is walking distance to our condo in the Bucktown, Logan Square, and Palmer Square neighborhoods.\n\nThe wedding ceremony starts promptly at 5 PM. Please plan to arrive at least 15 minutes beforehand to take your seats. If you arrive after 5 PM we will ask that you wait outside until the ceremony is over."
+    answer: "Everything for our wedding is walking distance to our condo in the Bucktown, Logan Square, and Palmer Square neighborhoods.\n\nThe wedding ceremony starts promptly at 5 PM. Please plan to arrive by 4:30 PM to take your seats. If you arrive after 5 PM we will ask that you wait outside until the ceremony is over."
   },
   {
     question: "What&rsquo;s the best way to get to the venue? To Saturday&rsquo;s lunch?",
