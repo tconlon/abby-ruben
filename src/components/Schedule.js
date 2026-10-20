@@ -11,10 +11,11 @@ const DotChainDivider = () => (
   </div>
 );
 
-const EventCard = ({ title, date, time, venue, address, mapsUrl, attire }) => (
+const EventCard = ({ title, date, time, note, venue, address, mapsUrl, attire }) => (
   <div className="schedule-event-card">
     <div className="schedule-event-name">{title}</div>
     <div className="schedule-event-datetime">{date} | {time}</div>
+    {note && <div className="schedule-event-note">{note}</div>}
     {venue && (
       <div className="schedule-event-venue">
         {mapsUrl ? (
@@ -45,6 +46,7 @@ export const Schedule = () => {
             title="Wedding Day"
             date="Fri Oct 23, 2026"
             time="5–11:30PM"
+            note="Ceremony starts at 5PM. Please arrive at 4:30PM."
             venue="The Joinery"
             address="2533 W Homer St, Chicago IL 60647"
             mapsUrl="https://maps.app.goo.gl/J2PxMmGxxyT5LK7g8"

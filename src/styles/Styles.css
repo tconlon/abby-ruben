@@ -199,6 +199,14 @@
   margin-bottom: 12px;
 }
 
+.schedule-event-note {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-body);
+  margin-bottom: 12px;
+}
+
 .schedule-event-venue {
   font-family: var(--font-body);
   font-size: 1.2rem;
