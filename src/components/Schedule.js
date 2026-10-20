@@ -46,7 +46,7 @@ export const Schedule = () => {
             title="Wedding Day"
             date="Fri Oct 23, 2026"
             time="5–11:30PM"
-            note="Ceremony starts promptly at 5PM. Please arrive by 4:30PM."
+            note="Ceremony starts at 5PM. Please arrive by 4:30PM."
             venue="The Joinery"
             address="2533 W Homer St, Chicago IL 60647"
             mapsUrl="https://maps.app.goo.gl/J2PxMmGxxyT5LK7g8"
